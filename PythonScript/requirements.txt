@@ -1,0 +1,2 @@
+pycaw
+PyQt5
