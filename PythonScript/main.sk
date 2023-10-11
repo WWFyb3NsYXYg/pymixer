@@ -32,7 +32,15 @@
     <property name="tabSpacing">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="toolBoxPage1" native="true">
+    <widget class="QWidget" name="toolBoxPage1">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>531</width>
+       <height>239</height>
+      </rect>
+     </property>
      <attribute name="label">
       <string>Main</string>
      </attribute>
@@ -269,7 +277,15 @@
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="toolBoxPage2" native="true">
+    <widget class="QWidget" name="toolBoxPage2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>531</width>
+       <height>239</height>
+      </rect>
+     </property>
      <attribute name="label">
       <string>Set-up Serial, Dial or Reset </string>
      </attribute>
@@ -318,7 +334,7 @@
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>270</x>
         <y>10</y>
         <width>101</width>
         <height>61</height>
@@ -342,55 +358,6 @@
           <property name="text">
            <string>reset</string>
           </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_4">
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>10</y>
-        <width>111</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>DialMode</string>
-      </property>
-      <widget class="QWidget" name="horizontalLayoutWidget_7">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>91</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_8">
-        <item>
-         <widget class="QComboBox" name="DialMode">
-          <item>
-           <property name="text">
-            <string>Chrome</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>AIMP</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>TG / Viber</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Another app</string>
-           </property>
-          </item>
          </widget>
         </item>
        </layout>

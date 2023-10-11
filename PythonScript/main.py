@@ -21,7 +21,6 @@ Sound.volume_set(0) # устанавливам звук на 0%
 comb = QtWidgets.QComboBox()
 
 
-
 # действия при открытом порте
 def onRead():
     if not serial.canReadLine(): return     # выходим если нечего читать
@@ -29,21 +28,24 @@ def onRead():
     rxs = str(rx, 'utf-8').strip()
     data = rxs.split(',')
     #print(data)
-    Sound.volume_set(int(data[0]))
-    ui.lcdM.display(int(data[0]))
+    match int(data[0]):
+        case 0:
+            Sound.volume_set(int(data[1]))
+            ui.lcdM.display(int(data[1]))
+        case 1:
+            dial_chrome_set(int(data[1]))
+            ui.lcdC.display(int(data[1]))    
+        case 2:
+            dial_aimp_set(int(data[1]))
+            ui.lcdA.display(int(data[1]))
+        case 3:
+            dial_telegram_set(int(data[1]))
+            ui.lcdT.display(int(data[1]))
+        case 4:
+            dial_app_set(int(data[1]))
+            ui.lcdS.display(int(data[1]))
 
-    if ui.DialMode.currentText() == "Chrome":
-        dial_chrome_set(int(data[1]))
-        ui.lcdC.display(int(data[1]))
-    elif ui.DialMode.currentText() == "AIMP":
-        dial_aimp_set(int(data[1]))
-        ui.lcdA.display(int(data[1]))
-    elif ui.DialMode.currentText() == "TG / Viber":
-        dial_telegram_set(int(data[1]))
-        ui.lcdT.display(int(data[1]))
-    elif ui.DialMode.currentText() == "Another app":
-        dial_app_set(int(data[1]))
-        ui.lcdS.display(int(data[1]))
+
 
 # открыть порт
 def onOpen():
